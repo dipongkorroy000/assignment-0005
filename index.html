@@ -8,46 +8,45 @@
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body id="body-bg" class="flex flex-col items-center bg-sky-50">
-    <section class="flex items-center justify-between my-10 w-5/6 rounded-xl p-5 bg-white">
+    <section class="flex items-center justify-between my-10 w-5/6 rounded-xl px-5 py-3 bg-white">
         <div class="flex items-center gap-2 ml-3">
             <img class="h-9" src="assets/logo.png" alt="">
             <p class="font-bold text-3xl max-md:text-xl"><span class="font-normal ">Dev</span>Board</p>
         </div>
-        <div class="flex items-center gap-14 max-md:gap-2 pr-3">
-            <span class="flex items-center gap-4 px-5 py-3 bg-blue-50 rounded-full">
+        <div class="flex items-center gap-10 max-md:gap-2">
+            <span class="flex items-center gap-3 px-5 py-3 bg-blue-50 rounded-full">
                 <img class="w-6 h-6" src="assets/checkbox.png" alt="">
                 <p id="checkbox-number" class="font-bold text-2xl">23</p>
             </span>
             <img id="color-btn" class="w-7 h-7" src="assets/theme-btn.png" alt="">
         </div>
     </section>
-    <section class="flex justify-between w-5/6 p-5 rounded-xl gap-5 max-lg:flex-col">
+    <section class="flex justify-between w-5/6 p-3 rounded-xl gap-3 max-lg:flex-col">
         <div class="rounded-md w-4/5">
             <!-- main top div -->
-            <div class="flex max-xl:flex-col max-xl:gap-3 rounded-md bg-white space-x-5 mb-10 p-5 max-xl:p-3">
+            <div class="flex justify-between max-xl:flex-col max-xl:gap-3 rounded-md bg-white mb-5 p-3 max-xl:p-2">
 
-                <div class= "flex bg-blue-50 items-center gap-3 rounded-xl p-5 max-xl:w-full">
-                    <img class="w-14 h-14 bg-white p-4 rounded-full" src="assets/checkbox.png" alt="">
-                    <div>
+                <div class= "flex gap-3 p-5 bg-blue-50 items-center rounded-xl max-xl:w-full">
+                    <img class="w-14 h-14 bg-white p-3 rounded-full" src="assets/checkbox.png" alt="">
+                    <div class="flex flex-col">
                         <p class="font-bold text-sm inline text-[rgb(117,117,117)]">Task Assigned</p>
                         <span id="total-number" class="font-bold text-3xl max-md:text-xl">9</span>
                     </div>
                 </div>
-                <div class="flex gap-3 w-3/5 bg-gradient-to-br from-blue-500 to-sky-200 rounded-xl p-5 max-xl:w-full">
+                <div onclick="page()"class="flex gap-3 p-3 w-1/2 bg-gradient-to-br from-blue-500 to-sky-200 rounded-xl max-xl:w-full">
                     <img class="max-md:w-12 max-md:h-12" src="assets/board.png" alt="">
                     <p class="font-bold text-2xl text-white max-md:text-sm">Discover Something <br> New Today!</p>
                 </div>
-                <div class= "flex bg-blue-50 items-center gap-3 rounded-xl p-5">
+                <div class= "flex gap-3 p-5 bg-blue-50 items-center rounded-xl">
                     <img class="w-14 h-14 bg-white p-4 rounded-full" src="assets/calender.png" alt="">
-                    <div>
-                        <p class="text-xl">Wed ,</p>
-                        <span class="font-extrabold text-xl inline max-md:text-sm">JUL 28 2025</span>
+                    <div id="date" class="text-lg font-bold">
+                        
                     </div>
                 </div>
 
             </div>
             <!-- details divs -->
-            <div class="grid grid-cols-3 max-2xl:grid-cols-2 max-lg:grid-cols-1 gap-4 rounded-xl bg-white p-5 max-xl:p-3">
+            <div class="grid grid-cols-3 max-2xl:grid-cols-2 max-lg:grid-cols-1 gap-3 rounded-xl bg-white p-3 max-xl:p-3">
 
                 <div class="bg-blue-50 p-5 rounded-xl">
                     <p class="font-bold text-sm bg-white w-24 h-10 rounded-lg flex justify-center items-center text-[rgb(117,117,117)]">ShopEase</p>
@@ -147,7 +146,7 @@
                     <img class="h-6 w-6" src="assets/activity.png" alt="">
                     <p class="font-bold text-2xl text-[rgb(69,69,69)] max-xl:text-sm">Activity Log</p>
                 </div>
-                <button class="bg-blue-500 rounded-xl py-2 px-5 text-white font-bold mx-auto max-md:text-sm">Clear History</button>
+                <button id="clear-btn" class="bg-blue-500 rounded-xl py-2 px-5 text-white font-bold mx-auto max-md:text-sm">Clear History</button>
             </div>
             <div id="history-div">
 

@@ -6,11 +6,8 @@ for (let btn of allBtn) {
     let convertTotalNum = parseInt(totalNum);
     let checkboxNum = document.getElementById('checkbox-number').innerText;
         let convertCheckboxNum = parseInt(checkboxNum);
-        btn.disable = true;
-
+        
         if (convertTotalNum > 1) {
-            btn.classList.remove('bg-blue-500')
-            btn.classList.add('bg-gray-400');
             
             let sub = convertTotalNum - 1;
             document.getElementById('total-number').innerText = sub;
@@ -20,9 +17,6 @@ for (let btn of allBtn) {
             
             alert("Board updated Successfully.")
         } else if(convertTotalNum >=1){
-            btn.classList.remove('bg-blue-500')
-            btn.classList.add('bg-gray-400')
-            
             let sub = convertTotalNum - 1;
             document.getElementById('total-number').innerText = sub;
             
@@ -39,6 +33,7 @@ for (let btn of allBtn) {
         history.innerHTML = `<p class = "bg-blue-50 rounded-md p-2 mb-3"> You have completed the task ${h1Title} at </p> <span id = 'time' class = 'time'></span>`;
 
         divHistory.appendChild(history);
+        btn.disabled = 'true';
         
     })
 }

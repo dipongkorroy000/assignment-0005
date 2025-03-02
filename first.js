@@ -45,16 +45,23 @@ function page() {
 
 
 
-let colors = ['red','blue','yellow','purple','green','orange','tomato','sky','pink']
-let bgColor = document.getElementById('color-btn');
-bgColor.addEventListener('click', function () {
-    let i = 0;
-    if ( i < colors.length){
-        document.getElementById('body-bg').style.backgroundColor = colors[i];
-        i = i + i;
-        
+let bgColorBtn = document.querySelector('.bg-color-btn');
+bgColorBtn.addEventListener('click', function () {
+    const letters = '0123456789ABCDEF';
+    const div = [];
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+        div.push(color)
+        // console.log(color)
     }
-})
+    for (const num of div) {
+        // console.log(num)
+        if (num.length === 7) {
+            document.body.style.backgroundColor = [num];
+        }
+    }
+  })
 
 
 function displayDate() {
